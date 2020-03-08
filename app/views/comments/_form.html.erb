@@ -1,0 +1,5 @@
+<%= bootstrap_form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+  <%= form.text_field :commenter %>
+  <%= form.text_field :body %>
+  <%= form.submit %>
+<% end %>

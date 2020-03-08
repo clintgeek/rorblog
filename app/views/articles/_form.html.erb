@@ -1,0 +1,21 @@
+<%= bootstrap_form_with(model: @article, local: true) do |form| %>
+ 
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger" role="alert">
+        <%= pluralize(@article.errors.count, "error") %> 
+        prohibited this article from being saved:
+      </div>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <%= form.text_field :title %>
+  <%= form.text_area :text %>
+  <%= form.submit %>
+ 
+<% end %>

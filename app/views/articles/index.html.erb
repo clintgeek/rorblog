@@ -1,0 +1,27 @@
+<div class="jumbotron text-white bg-info">
+  <h1 class="display-4">Available Articles</h1>
+  <p class="lead">The Rails Guide demo blog, but with Bootstrap!</p>
+  <hr class="my-4">
+  <p>You can use 'example / admin' to login if you should want to.</p>
+  <%= link_to 'New Article', new_article_path, :class => "btn btn-primary btn-lg" %>
+</div>
+
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="3"></th> 
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
