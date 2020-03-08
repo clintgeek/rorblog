@@ -1,24 +1,5 @@
-# README
+### Docker container with Rails Guide blog, dressed up with Bootstrap.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+run `docker compose up` in root dir to start blog app
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+see [Docker Docs for Rails](https://docs.docker.com/compose/rails/) for instructions to setup your own Rails project in Docker
